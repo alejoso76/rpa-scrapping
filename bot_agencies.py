@@ -193,9 +193,12 @@ def download_wait(directory, timeout, nfiles=None):
 
 
 def run():
-    names, spendings = get_agencies_spendings()
-    time.sleep(1)
-    get_individual_investments(names)
+    try:
+        names, spendings = get_agencies_spendings()
+        time.sleep(1)
+        get_individual_investments(names)
+    finally:
+        browser_lib.close_all_browsers()
 
 # Main ---------------------------------------------------------------------------------------------------------------------------
 if __name__ == "__main__":

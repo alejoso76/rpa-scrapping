@@ -2,7 +2,8 @@ tasks:
   Run Python:
     shell: python bot_agencies.py
 
-condaConfigFile: conda.yaml
+condaConfigFile:
+  conda.yaml
 artifactsDir: output
 PATH:
   - .
