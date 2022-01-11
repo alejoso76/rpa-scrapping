@@ -54,7 +54,7 @@ def get_agencies_spendings():
 
 def get_individual_investments(names):
     with open(abs_file_path) as f:
-        agency_conf = f.read()
+        agency_conf = f.read().strip()
     print(F"Agency in conf file: {agency_conf}")
 
     path_agency = F'//*[@id="agency-tiles-widget"]/div/div/div/div/div/div/div[1]/a/span[contains(text(),"{agency_conf}")]'
