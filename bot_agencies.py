@@ -171,7 +171,7 @@ def download_pdfs(links):
             browser_lib.close_browser()
             browser_lib.open_available_browser(link, preferences=prefs)
             browser_lib.driver.find_element_by_xpath(path_download_pdf).click()
-            browser_lib.wait_until_element_is_not_visible('//*[@id="business-case-pdf"]/span', timeout=10)
+            browser_lib.wait_until_element_is_not_visible('//*[@id="business-case-pdf"]/span', timeout=45)
         download_wait(download_path, 10)
         # time.sleep(1)
         print(F"Download PDF #{str(index + 1)} - Stop")
