@@ -130,9 +130,9 @@ def write_agency_inv_to_excel(table_text, agency):
     # Ubuntu
     rb = xlrd.open_workbook(exc_rel_path, formatting_info=True)
     wb = xl_copy(rb)
-    sheet1 = wb.add_sheet(agency)
     list_first_letter = [s[0] for s in agency.split()]
     agency = "".join(list_first_letter)
+    sheet1 = wb.add_sheet(agency)
     sheet1.write(0, 0, 'UII')
     sheet1.write(0, 1, 'Bureau')
     sheet1.write(0, 2, 'Investment Title')
